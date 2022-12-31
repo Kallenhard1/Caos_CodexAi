@@ -5,6 +5,13 @@ import { Configuration, OpenAIApi } from 'openai'
 
 dotenv.config()
 
+//Try this code instead of new Configuration
+/*
+const configuration = app.get('/api-key', (req, res) => { 
+  res.send({ apiKey: procexx.env.OPENAI_API_KEY, 
+  });
+});
+*/
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
